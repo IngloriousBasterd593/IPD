@@ -3,22 +3,22 @@ typedef struct {
     unsigned int c, d;
 } Matrix;
 
-static Matrix multiply(Matrix x, Matrix y)
+static Matrix multiply(volatile Matrix x, volatile Matrix y)
 {
-    Matrix result;
+    volatile Matrix result;
 
     result.a = x.a * y.a + x.b * y.c;
     result.b = x.a * y.b + x.b * y.d;
     result.c = x.c * y.a + x.d * y.c;
     result.d = x.c * y.b + x.d * y.d;
 
-    return result;
+    return result;  // Atgriežot "result", no volatile kvalifikācijas, tas tiks ignorēts atgriešanas laikā.
 }
 
 
-static Matrix matrix_power(Matrix base, unsigned short exponent)
+static Matrix matrix_power(volatile Matrix base, volatile unsigned short exponent)
 {
-    Matrix result = {1, 0, 0, 1};
+    volatile Matrix result = {1, 0, 0, 1};
 
     while(exponent > 0)
     {
@@ -35,7 +35,7 @@ static Matrix matrix_power(Matrix base, unsigned short exponent)
 }
 
 
-static unsigned int fibonacci(unsigned short n)
+static unsigned int fibonacci(volatile unsigned short n)
 {
     if(n == 0)
     {
@@ -46,15 +46,15 @@ static unsigned int fibonacci(unsigned short n)
         return 1;
     }
 
-    Matrix base = {1, 1, 1, 0};
-    Matrix result = matrix_power(base, n - 1);
+    volatile Matrix base = {1, 1, 1, 0};
+    volatile Matrix result = matrix_power(base, n - 1);
    
     return result.a;
 }
 
 int main()
 {
-    unsigned int fib = fibonacci(96);
+    volatile unsigned int fib = fibonacci(96);
 
     return 0;
 }
