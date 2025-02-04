@@ -1,6 +1,6 @@
 typedef struct {
-    unsigned int a, b;
-    unsigned int c, d;
+    volatile unsigned int a, b;
+    volatile unsigned int c, d;
 } Matrix;
 
 static Matrix multiply(volatile Matrix x, volatile Matrix y)
@@ -12,8 +12,7 @@ static Matrix multiply(volatile Matrix x, volatile Matrix y)
     result.c = x.c * y.a + x.d * y.c;
     result.d = x.c * y.b + x.d * y.d;
 
-    return result;  // Atgriežot "result", no volatile kvalifikācijas, tas tiks ignorēts atgriešanas laikā.
-}
+    return result; 
 
 
 static Matrix matrix_power(volatile Matrix base, volatile unsigned short exponent)
