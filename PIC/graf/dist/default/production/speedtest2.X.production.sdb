@@ -1,0 +1,54 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F873 ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"30 C:\Users\kroko\MPLABXProjects\speedtest2.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"42
+[v _graf graf `(v  1 e 1 0 ]
+"166 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f873.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"1220
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"18 C:\Users\kroko\MPLABXProjects\speedtest2.X\main.c
+[v _k k `VEui  1 e 2 0 ]
+"19
+[v _i i `VEui  1 e 2 0 ]
+"20
+[v _j j `VEui  1 e 2 0 ]
+"22
+[v _d d `VE[5][5]i  1 e 50 0 ]
+"30
+[v _main main `(v  1 e 1 0 ]
+{
+"40
+} 0
+"42
+[v _graf graf `(v  1 e 1 0 ]
+{
+"52
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 p 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 1 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 p 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 p 1 2 ]
+"51
+} 0

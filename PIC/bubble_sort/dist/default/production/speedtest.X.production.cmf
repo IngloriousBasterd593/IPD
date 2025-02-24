@@ -1,0 +1,333 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+end_init CODE 0 0 0 2 2 1
+config CONFIG 4 2007 2007 1 2 1
+$dist/default/production\speedtest.X.production.o
+cinit CODE 0 7EB 7EB 15 2 1
+text1 CODE 0 6FB 6FB F0 2 1
+maintext CODE 0 6B6 6B6 13 2 1
+cstackBANK0 BANK0 1 60 60 7 1 1
+inittext CODE 0 6A5 6A5 11 2 1
+bssBANK0 BANK0 1 52 52 E 1 1
+idataBANK0 CODE 0 6C9 6C9 32 2 1
+dataBANK0 BANK0 1 20 20 32 1 1
+clrtext CODE 0 69D 69D 8 2 1
+config CONFIG 4 2007 2007 1 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 67-7D 1
+RAM A0-FD 1
+BANK0 67-7D 1
+BANK1 A0-FD 1
+CONST 2-69C 2
+CONST 800-FFF 2
+ENTRY 2-69C 2
+ENTRY 800-FFF 2
+IDLOC 2000-2003 2
+CODE 2-69C 2
+CODE 800-FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-17D 1
+SFR3 180-1FD 1
+EEDATA 2100-217F 2
+STRCODE 2-69C 2
+STRCODE 800-FFF 2
+STRING 2-69C 2
+STRING 800-FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\speedtest.X.production.o
+7EB cinit CODE >416:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7EB cinit CODE >419:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7EB cinit CODE >475:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7EC cinit CODE >476:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7ED cinit CODE >477:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7EE cinit CODE >478:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7EF cinit CODE >479:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7F0 cinit CODE >480:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7F1 cinit CODE >481:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7F2 cinit CODE >482:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7F3 cinit CODE >483:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7F4 cinit CODE >484:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7F7 cinit CODE >503:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7F8 cinit CODE >504:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7F9 cinit CODE >505:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7FA cinit CODE >506:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7FD cinit CODE >512:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7FD cinit CODE >514:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+7FE cinit CODE >515:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6FB text1 CODE >35:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+6FB text1 CODE >36:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+710 text1 CODE >36:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+717 text1 CODE >37:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+72C text1 CODE >37:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+733 text1 CODE >38:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+73E text1 CODE >39:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+759 text1 CODE >39:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+75D text1 CODE >39:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+761 text1 CODE >40:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+76E text1 CODE >41:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+782 text1 CODE >42:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+78C text1 CODE >44:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+791 text1 CODE >44:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+795 text1 CODE >44:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+799 text1 CODE >44:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7A7 text1 CODE >44:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7AD text1 CODE >44:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7B3 text1 CODE >44:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7BA text1 CODE >44:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7BE text1 CODE >44:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7C2 text1 CODE >44:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7C6 text1 CODE >44:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7CA text1 CODE >45:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7CD text1 CODE >45:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7D1 text1 CODE >45:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7D5 text1 CODE >45:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7D9 text1 CODE >46:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7DE text1 CODE >46:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7E2 text1 CODE >46:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7E6 text1 CODE >46:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+7EA text1 CODE >47:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+6B6 maintext CODE >23:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+6B6 maintext CODE >25:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+6B9 maintext CODE >28:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+6BD maintext CODE >29:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+6C0 maintext CODE >30:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+6C3 maintext CODE >31:C:\Users\kroko\MPLABXProjects\speedtest.X\main.c
+69D clrtext CODE >490:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+69D clrtext CODE >491:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+69E clrtext CODE >492:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+69E clrtext CODE >493:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+69F clrtext CODE >494:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6A0 clrtext CODE >495:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6A1 clrtext CODE >496:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6A2 clrtext CODE >497:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6A3 clrtext CODE >498:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6A4 clrtext CODE >499:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6A5 inittext CODE >449:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6A5 inittext CODE >450:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6A6 inittext CODE >451:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6A7 inittext CODE >452:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6A8 inittext CODE >453:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6A9 inittext CODE >460:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6A9 inittext CODE >461:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6AC inittext CODE >462:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6AD inittext CODE >463:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6AE inittext CODE >464:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6AF inittext CODE >465:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6B0 inittext CODE >466:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6B1 inittext CODE >467:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6B2 inittext CODE >468:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6B3 inittext CODE >469:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6B4 inittext CODE >470:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+6B5 inittext CODE >471:C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_i 56 0 BANK0 1 bssBANK0 dist/default/production\speedtest.X.production.o
+_j 52 0 BANK0 1 bssBANK0 dist/default/production\speedtest.X.production.o
+___latbits 1 0 ABS 0 - dist/default/production\speedtest.X.production.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__Hspace_0 800 0 ABS 0 - -
+__Hspace_1 67 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 400F 0 ABS 0 - -
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+__Hstrings 0 0 ABS 0 strings -
+___sp 0 0 STACK 2 stack C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+_main D6C 0 CODE 0 maintext dist/default/production\speedtest.X.production.o
+_pass 5A 0 BANK0 1 bssBANK0 dist/default/production\speedtest.X.production.o
+_temp 5E 0 BANK0 1 bssBANK0 dist/default/production\speedtest.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\speedtest.X.production.o
+___stack_hi 0 0 STACK 2 stack C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+___stack_lo 0 0 STACK 2 stack C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+start 0 0 CODE 0 init C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__Hpowerup 0 0 CODE 0 powerup -
+intlevel0 0 0 ENTRY 0 functab C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+wtemp0 7E 0 ABS 0 - dist/default/production\speedtest.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lmaintext 0 0 ABS 0 maintext -
+__end_of_bubble_sort FD6 0 CODE 0 text1 dist/default/production\speedtest.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+___stacklo 0 0 ABS 0 - C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+start_initialization FD6 0 CODE 0 cinit dist/default/production\speedtest.X.production.o
+clear_ram0 D3A 0 CODE 0 clrtext dist/default/production\speedtest.X.production.o
+__pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/production\speedtest.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 BANK2 1 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
+__Hcinit 1000 0 CODE 0 cinit -
+__Hstack 0 0 STACK 2 stack -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 BANK2 1 bank2 -
+__Lbank3 0 0 BANK3 1 bank3 -
+__Lcinit FD6 0 CODE 0 cinit -
+__Lstack 0 0 STACK 2 stack -
+__Linittext 0 0 ABS 0 inittext -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hheap 0 0 HEAP 7 heap -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsivt 0 0 CODE 0 sivt -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Lheap 0 0 HEAP 7 heap -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsivt 0 0 CODE 0 sivt -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 800 0 ABS 0 - -
+__S1 67 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_arr 20 0 BANK0 1 dataBANK0 dist/default/production\speedtest.X.production.o
+__Lintentry 0 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+__pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production\speedtest.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__pmaintext D6C 0 CODE 0 maintext dist/default/production\speedtest.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+__Hinittext 0 0 ABS 0 inittext -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+init_fetch0 D4A 0 CODE 0 inittext dist/default/production\speedtest.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__Lend_init 0 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization FFA 0 CODE 0 cinit dist/default/production\speedtest.X.production.o
+__Hintentry 0 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+__Hreset_vec 0 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__ptext1 DF6 0 CODE 0 text1 dist/default/production\speedtest.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+___heap_hi 0 0 ABS 0 - C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+___heap_lo 0 0 ABS 0 - C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+__end_of__initialization FFA 0 CODE 0 cinit dist/default/production\speedtest.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__pidataBANK0 D92 0 CODE 0 idataBANK0 dist/default/production\speedtest.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext -
+_bubble_sort DF6 0 CODE 0 text1 dist/default/production\speedtest.X.production.o
+__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production\speedtest.X.production.o
+__Hend_init 4 0 CODE 0 end_init -
+init_ram0 D52 0 CODE 0 inittext dist/default/production\speedtest.X.production.o
+__end_of_main D92 0 CODE 0 maintext dist/default/production\speedtest.X.production.o
+_PORTA 5 0 ABS 0 - dist/default/production\speedtest.X.production.o
+_TRISA 85 0 ABS 0 - dist/default/production\speedtest.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__initialization FD6 0 CODE 0 cinit dist/default/production\speedtest.X.production.o
+__pbssBANK0 52 0 BANK0 1 bssBANK0 dist/default/production\speedtest.X.production.o
+___int_stack_hi 0 0 STACK 2 stack C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+___int_stack_lo 0 0 STACK 2 stack C:\Users\kroko\AppData\Local\Temp\xcAs2cg.\driver_tmp_12.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7EB FD6 15 2
+text1 0 6FB DF6 F0 2
+maintext 0 6B6 D6C 13 2
+inittext 0 6A5 D4A 11 2
+reset_vec 0 0 0 2 2
+idataBANK0 0 6C9 D92 32 2
+dataBANK0 1 20 20 47 1
+clrtext 0 69D D3A 8 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
