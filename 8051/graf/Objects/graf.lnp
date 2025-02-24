@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\graf" 
+PRINT(".\Listings\graf.m51") RAMSIZE(256) 

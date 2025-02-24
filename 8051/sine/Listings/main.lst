@@ -1,0 +1,93 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              02/19/2025 21:02:11 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          #define M_PI 3.14159265f
+   4          #define TABLE_SIZE 30
+   5          
+   6          volatile float radians;
+   7          volatile float x2;
+   8          volatile float term1;
+   9          volatile float term2;
+  10          volatile float term3;
+  11          volatile float sine_value;
+  12          volatile int i;
+  13          
+  14          volatile int sine_table[TABLE_SIZE];
+  15          
+  16          
+  17          void sine(void);
+  18          int calculate_sine_pwm(float radians);
+  19          float sin_approx(float x);
+  20          
+  21          void main(void)
+  22          {
+  23   1          while(1)
+  24   1          {
+  25   2               P1 = 0x01; // Turn ON all LED's connected to Port1
+  26   2               sine();
+  27   2               P1 = 0x00; // Turn OFF all LED's connected to Port1
+  28   2               sine();
+  29   2          }
+  30   1      }
+  31          
+  32          float sin_approx(float x) {
+  33   1          // Normalize x to the range -p to p
+  34   1          while (x > M_PI) {
+  35   2              x -= 2.0f * M_PI;
+  36   2          }
+  37   1          while (x < -M_PI) {
+  38   2              x += 2.0f * M_PI;
+  39   2          }
+  40   1      
+  41   1          // Taylor series expansion up to the 5th term:
+  42   1          // sin(x) ˜ x - (x^3)/6 + (x^5)/120
+  43   1          x2 = x * x;
+  44   1          term1 = x;
+  45   1          term2 = (x * x2) / 6.0f;   // x^3 / 3!
+  46   1          term3 = (x * x2 * x2) / 120.0f;  // x^5 / 5!
+  47   1      
+  48   1          return term1 - term2 + term3;
+  49   1      }
+  50          
+  51          // Function to calculate sine value and map it to the 0–255 PWM range
+  52          int calculate_sine_pwm(float radians) {
+  53   1          // Calculate sine value (-1.0 to 1.0)
+  54   1          sine_value = sin_approx(radians);
+C51 COMPILER V9.60.7.0   MAIN                                                              02/19/2025 21:02:11 PAGE 2   
+
+  55   1      
+  56   1          // Map sine value from (-1.0 to 1.0) to (0–255)
+  57   1          return (int)((sine_value + 1.0f) * 127.5f);
+  58   1      }
+  59          
+  60          void sine(void){
+  61   1        for (i = 0; i < TABLE_SIZE; i++) {
+  62   2          // Calculate angle in radians (evenly spaced over 0–2p)
+  63   2          radians = (float)i * 2.0f * M_PI / (float)TABLE_SIZE;
+  64   2          sine_table[i] = calculate_sine_pwm(radians);
+  65   2        }
+  66   1      }
+  67          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    405    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     86       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

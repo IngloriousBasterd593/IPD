@@ -1,0 +1,213 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    02/19/2025  21:02:11  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\main.obj TO .\Objects\sine PRINT (.\Listings\sine.m51) RAMS
+>> IZE (256)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPADD)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPCMP)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FCAST)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?CASTF)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LNEG)
+
+
+LINK MAP OF MODULE:  .\Objects\sine (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0056H     UNIT         ?DT?MAIN
+            DATA    005EH     0004H     UNIT         _DATA_GROUP_
+            IDATA   0062H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     03E4H     UNIT         ?C?LIB_CODE
+            CODE    0BE4H     0105H     UNIT         ?PR?_SIN_APPROX?MAIN
+            CODE    0CE9H     0058H     UNIT         ?PR?SINE?MAIN
+            CODE    0D41H     002AH     UNIT         ?PR?_CALCULATE_SINE_PWM?MAIN
+            CODE    0D6BH     000EH     UNIT         ?PR?MAIN?MAIN
+            CODE    0D79H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\sine (?C_STARTUP)
+
+
+SEGMENT                                DATA_GROUP 
+  +--> CALLED SEGMENT                START    LENGTH
+----------------------------------------------------
+?C_C51STARTUP                        -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                        -----    -----
+  +--> ?PR?SINE?MAIN
+
+?PR?SINE?MAIN                        -----    -----
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/19/2025  21:02:11  PAGE 2
+
+
+  +--> ?PR?_CALCULATE_SINE_PWM?MAIN
+
+?PR?_CALCULATE_SINE_PWM?MAIN         -----    -----
+  +--> ?PR?_SIN_APPROX?MAIN
+
+?PR?_SIN_APPROX?MAIN                 005EH    0004H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\sine (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0D79H         SEGMENT       ?C_C51STARTUP
+  I:0062H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0D7CH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0D79H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0D79H         LINE#         133
+  C:0D7BH         LINE#         134
+  C:0D7CH         LINE#         135
+  C:0D7DH         LINE#         136
+  C:0D7FH         LINE#         185
+  C:0D82H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:0008H         PUBLIC        sine_table
+  C:0D6BH         PUBLIC        main
+  D:0044H         PUBLIC        x2
+  C:0CE9H         PUBLIC        sine
+  D:0048H         PUBLIC        sine_value
+  C:0BE4H         PUBLIC        _sin_approx
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/19/2025  21:02:11  PAGE 3
+
+
+  D:004CH         PUBLIC        radians
+  D:0050H         PUBLIC        i
+  D:0052H         PUBLIC        term1
+  D:0056H         PUBLIC        term2
+  D:005AH         PUBLIC        term3
+  C:0D41H         PUBLIC        _calculate_sine_pwm
+  -------         PROC          MAIN
+  C:0D6BH         LINE#         21
+  C:0D6BH         LINE#         22
+  C:0D6BH         LINE#         23
+  C:0D6BH         LINE#         24
+  C:0D6BH         LINE#         25
+  C:0D6EH         LINE#         26
+  C:0D71H         LINE#         27
+  C:0D74H         LINE#         28
+  C:0D77H         LINE#         29
+  -------         ENDPROC       MAIN
+  -------         PROC          _SIN_APPROX
+  D:005EH         SYMBOL        x
+  C:0BE4H         LINE#         32
+  C:0BE6H         LINE#         34
+  C:0BFDH         LINE#         35
+  C:0C18H         LINE#         36
+  C:0C1AH         LINE#         37
+  C:0C2FH         LINE#         38
+  C:0C4AH         LINE#         39
+  C:0C4CH         LINE#         43
+  C:0C67H         LINE#         44
+  C:0C76H         LINE#         45
+  C:0C9BH         LINE#         46
+  C:0CCBH         LINE#         48
+  -------         ENDPROC       _SIN_APPROX
+  -------         PROC          _CALCULATE_SINE_PWM
+  D:0004H         SYMBOL        radians
+  C:0D41H         LINE#         52
+  C:0D41H         LINE#         54
+  C:0D4CH         LINE#         57
+  -------         ENDPROC       _CALCULATE_SINE_PWM
+  -------         PROC          SINE
+  C:0CE9H         LINE#         60
+  C:0CE9H         LINE#         61
+  C:0CEEH         LINE#         63
+  C:0D13H         LINE#         64
+  C:0D2BH         LINE#         65
+  C:0D40H         LINE#         66
+  -------         ENDPROC       SINE
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?FPADD
+  C:0807H         PUBLIC        ?C?FPADD
+  C:0803H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+  -------         MODULE        ?C?FPMUL
+  C:08F8H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/19/2025  21:02:11  PAGE 4
+
+
+  -------         MODULE        ?C?FPDIV
+  C:0A01H         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FPCMP
+  C:0AA0H         PUBLIC        ?C?FPCMP
+  C:0A9EH         PUBLIC        ?C?FPCMP3
+  -------         ENDMOD        ?C?FPCMP
+
+  -------         MODULE        ?C?FCAST
+  C:0B21H         PUBLIC        ?C?FCASTC
+  C:0B1CH         PUBLIC        ?C?FCASTI
+  C:0B17H         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        ?C?CASTF
+  C:0B55H         PUBLIC        ?C?CASTF
+  -------         ENDMOD        ?C?CASTF
+
+  -------         MODULE        ?C?LNEG
+  C:0BD6H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 01A4H BYTE (20%) *
+******************************************************************************
+
+Program Size: data=99.0 xdata=0 code=1416
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
